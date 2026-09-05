@@ -226,7 +226,7 @@ func settingsIssueMessages(values map[string]any) []settingsIssue {
 		name := strings.TrimSpace(stringFromAny(raw))
 		if name != "" && normalizeTimezone(name) != name {
 			result = append(result, settingsIssue{
-				message: fmt.Sprintf("运势时区“%s”无效；本次改用默认时区 Asia/Shanghai。", name),
+				message: fmt.Sprintf("运势时区“%s”无效，改用 Asia/Shanghai。", name),
 				fields:  map[string]any{"configured_timezone": name, "fallback_timezone": "Asia/Shanghai"},
 			})
 		}
@@ -237,13 +237,13 @@ func settingsIssueMessages(values map[string]any) []settingsIssue {
 			valid := len(normalizeFortunes(raw))
 			if valid == 0 {
 				result = append(result, settingsIssue{
-					message: fmt.Sprintf("运势覆盖共 %d 条，但没有可用条目；本次使用内置默认运势库。", len(items)),
+					message: fmt.Sprintf("%d 条自定义运势均无效，改用内置运势。", len(items)),
 					fields:  map[string]any{"configured_count": len(items), "valid_count": 0, "fallback": "default_fortunes"},
 				})
 			} else if valid < len(items) {
 				invalid := len(items) - valid
 				result = append(result, settingsIssue{
-					message: fmt.Sprintf("运势覆盖共 %d 条，其中 %d 条无效并已跳过；本次使用其余 %d 条有效内容。", len(items), invalid, valid),
+					message: fmt.Sprintf("跳过 %d 条无效的自定义运势，使用其余 %d 条。", invalid, valid),
 					fields:  map[string]any{"configured_count": len(items), "valid_count": valid, "invalid_count": invalid},
 				})
 			}
@@ -255,7 +255,7 @@ func settingsIssueMessages(values map[string]any) []settingsIssue {
 			if valid < len(items) {
 				invalid := len(items) - valid
 				result = append(result, settingsIssue{
-					message: fmt.Sprintf("特殊日期共 %d 条，其中 %d 条无效并已跳过；本次使用其余 %d 条有效配置。", len(items), invalid, valid),
+					message: fmt.Sprintf("跳过 %d 条无效的特殊日期配置，使用其余 %d 条。", invalid, valid),
 					fields:  map[string]any{"configured_count": len(items), "valid_count": valid, "invalid_count": invalid},
 				})
 			}
