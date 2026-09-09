@@ -1,5 +1,6 @@
 {
   "id": "stats",
+  "name": "运势统计",
   "version": "1",
   "entry_html": "template.html",
   "stylesheet": "styles.css",

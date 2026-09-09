@@ -1,5 +1,6 @@
 {
   "id": "card",
+  "name": "今日运势",
   "version": "1",
   "entry_html": "template.html",
   "stylesheet": "styles.css",
