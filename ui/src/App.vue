@@ -69,7 +69,6 @@ watch(totalPages, (pages) => {
 
 void host.ready
   .then((init) => {
-    pageTitle.value = init.page.label || '运势设置'
     applySettings(init.config, true)
     setStatus('已载入设置')
   })

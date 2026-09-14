@@ -100,7 +100,7 @@ plugin-fortune/
   internal/assets/fortunes.json 默认运势、触发词、宜忌和时区
   templates/                   运势卡片与统计卡片模板
   ui/                          Vue 管理页
-  info.json                    manifest v3、权限、默认触发词与发布元数据
+  info.json                    manifest v4、默认触发词与发布元数据
 ```
 
 `fortunes.json` 编译进后端并由管理页作为完整默认运势库使用；manifest 内联默认触发词与时区。`templates/card` 与 `templates/stats` 由统一构建器自动发现并随插件包发布。
