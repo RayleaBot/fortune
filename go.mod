@@ -1,4 +1,4 @@
-module github.com/RayleaBot/plugin-fortune
+module github.com/RayleaBot/fortune
 
 go 1.27.1
 

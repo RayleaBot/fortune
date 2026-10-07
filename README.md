@@ -25,7 +25,7 @@ RayleaBot 官方插件 · `raylea.fortune`
 
 ### 本地安装包
 
-也可以在插件列表中安装本仓库 [GitHub Release](https://github.com/RayleaBot/plugin-fortune/releases) 里对应平台的 ZIP：
+也可以在插件列表中安装本仓库 [GitHub Release](https://github.com/RayleaBot/fortune/releases) 里对应平台的 ZIP：
 
 | 平台 | 资源 |
 | --- | --- |
@@ -94,7 +94,7 @@ RayleaBot 官方插件 · `raylea.fortune`
 ### 目录结构
 
 ```text
-plugin-fortune/
+fortune/
   cmd/fortune/                 进程入口
   internal/plugin/             事件处理、运势逻辑和测试
   internal/assets/fortunes.json 默认运势、触发词、宜忌和时区
@@ -114,7 +114,7 @@ plugin-fortune/
   "workspace_version": "2",
   "plugins": [
     {
-      "path": "../RayleaBotPlugins/plugin-fortune",
+      "path": "../RayleaBotPlugins/fortune",
       "enabled": true
     }
   ]

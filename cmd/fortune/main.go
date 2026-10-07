@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/RayleaBot/plugin-fortune/internal/plugin"
+	"github.com/RayleaBot/fortune/internal/plugin"
 )
 
 func main() {

@@ -8,7 +8,7 @@
   "metadata": {
     "description": "每日运势抽取、统计与可视化管理",
     "author": "raylea",
-    "repo": "https://github.com/RayleaBot/plugin-fortune",
+    "repo": "https://github.com/RayleaBot/fortune",
     "keywords": ["fortune", "render", "vue"]
   },
   "concurrency": 4,
