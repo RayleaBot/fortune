@@ -4,7 +4,7 @@
   "version": "0.4.0",
   "manifest_version": "4",
   "license": "MIT",
-  "min_core_version": "0.7.0",
+  "min_core_version": "0.4.0",
   "metadata": {
     "description": "每日运势抽取、统计与可视化管理",
     "author": "raylea",
